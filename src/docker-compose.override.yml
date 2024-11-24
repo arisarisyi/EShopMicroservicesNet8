@@ -1,0 +1,5 @@
+services:
+  catalogdb:
+    container_name: catalogdb
+    ports:
+      - "5432:5432"

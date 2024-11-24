@@ -1,0 +1,41 @@
+# Buat file .gitignore baru dengan konten untuk dotnet
+# IDE
+.idea/
+**/.idea/
+.idea/.idea.*
+**/.idea/.idea.*
+.vscode/
+**/.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+**/.vs/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]uild/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+
+# Lainnya
+*.swp
+*.*~
+*.dbmdl
+*.jfm
