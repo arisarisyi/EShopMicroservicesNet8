@@ -35,7 +35,7 @@ internal class UpdateProductCommandHandler
         logger.LogInformation("GetProductByIdQueryHandler.Handle called with {@Command}",command);
 
         var product = await session.LoadAsync<Product>(command.Id, cancellationToken);
-        if (product is null) throw new ProductNotFoundException();
+        if (product is null) throw new ProductNotFoundException(command.Id);
 
         product.Name = command.Name;
         product.Category = command.Category;
