@@ -28,14 +28,12 @@ public class CreateProductCommandValidator : AbstractValidator<CreateProductComm
 
 // ICommandHandler diamabil dari blocking blocks yang telah kita buat dengan mediatR yang membutuhkan command dan response
 // Response tidak boleh null seperti yang telah kita buat
-internal class CreateProductCommandHandler(IDocumentSession session,ILogger<CreateProductCommandHandler> logger) 
+internal class CreateProductCommandHandler(IDocumentSession session) 
     :ICommandHandler<CreateProductCommand,CreateProductResult>
 {
     // Handle cara gampangnya generate dari ICommandHandler lalu di logic
     public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
-        
-        logger.LogInformation("CreateProductCommandHandler.Handler {@Command}",command);
         // Create Product Entity from command object
         var product = new Product
         {
